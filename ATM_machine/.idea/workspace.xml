@@ -4,11 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c399ce3c-1cc8-4e18-abff-382c379cb6b5" name="Changes" comment="" />
+    <list default="true" id="c399ce3c-1cc8-4e18-abff-382c379cb6b5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Slot-Machine-JavaSwing-OOP-GUI" beforeDir="false" afterPath="$PROJECT_DIR$/../Slot-Machine-JavaSwing-OOP-GUI" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vending-Machine" beforeDir="false" afterPath="$PROJECT_DIR$/../Vending-Machine" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -31,6 +37,8 @@
     "Application.main_Class.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
     "last_opened_file_path": "C:/Users/DELL/Documents/Huce/ki 2 nam 2/do an oop/ATM_machine",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -70,6 +78,7 @@
       <workItem from="1746409371936" duration="422000" />
       <workItem from="1746459252593" duration="6961000" />
       <workItem from="1746534573503" duration="1649000" />
+      <workItem from="1746812275752" duration="244000" />
     </task>
     <servers />
   </component>
