@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c399ce3c-1cc8-4e18-abff-382c379cb6b5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Slot-Machine-JavaSwing-OOP-GUI" beforeDir="false" afterPath="$PROJECT_DIR$/../Slot-Machine-JavaSwing-OOP-GUI" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Vending-Machine" beforeDir="false" afterPath="$PROJECT_DIR$/../Vending-Machine" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,33 +23,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.BalanceEnquriy.executor": "Debug",
-    "Application.Connn.executor": "Run",
-    "Application.Deposit.executor": "Run",
-    "Application.FastCash.executor": "Run",
-    "Application.Login.executor": "Run",
-    "Application.Pin.executor": "Run",
-    "Application.Signup.executor": "Run",
-    "Application.Withdrawl.executor": "Run",
-    "Application.main_Class.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/DELL/Documents/Huce/ki 2 nam 2/do an oop/ATM_machine",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.BalanceEnquriy.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Connn.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Deposit.executor&quot;: &quot;Run&quot;,
+    &quot;Application.FastCash.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Login.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Pin.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Signup.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Withdrawl.executor&quot;: &quot;Run&quot;,
+    &quot;Application.main_Class.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/DELL/Documents/Huce/ki 2 nam 2/do an oop/ATM_machine&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager">
+    <configuration name="truy_van.sql" type="DatabaseScript" editBeforeRun="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/ATM_machine/truy_van.sql" />
+      <script-mode>FILE</script-mode>
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -79,6 +85,10 @@
       <workItem from="1746459252593" duration="6961000" />
       <workItem from="1746534573503" duration="1649000" />
       <workItem from="1746812275752" duration="244000" />
+      <workItem from="1746864968385" duration="2449000" />
+      <workItem from="1746867534574" duration="147000" />
+      <workItem from="1747042660458" duration="25000" />
+      <workItem from="1747042931505" duration="1189000" />
     </task>
     <servers />
   </component>
