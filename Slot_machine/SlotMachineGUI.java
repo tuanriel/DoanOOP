@@ -1,20 +1,3 @@
-/**
- * 
- * This program is a Java slot machine video game using the swing GUI.
- * 
- * The difficulty is determined by the number of images stored inside the ArrayList.
- * Credits are required to play, they can be bought with winnings.
- * 
- * If you run out of credits and have no winnings to buy more you will not be able to 
- * continue playing! www.gambleaware.co.uk
- * 
- * Date: 09/03/2012
- * @author: Michael Warner (i7904353)
- * Week 20 Assessed Task 1
- * 
- * Task: 	For this task you can create any GUI you want to.
- *
- */
 
 package slotMachineGUI;
 
@@ -27,6 +10,8 @@ import java.util.ArrayList;
 import javax.swing.border.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.sound.sampled.*;
+import java.io.*;
 
 public class SlotMachineGUI {
 
@@ -94,6 +79,30 @@ public class SlotMachineGUI {
 		pnlReel3.setBackground(new java.awt.Color(255, 215, 0));
 		pnlReel3.setBorder(new SoftBevelBorder(BevelBorder.LOWERED));
 
+	}
+	private Clip currentClip; // Biến dùng để tắt âm thanh trước khi phát âm mới
+
+	public void playSound(String soundFileName) {
+		try {
+			// Nếu có âm thanh đang phát thì dừng lại trước
+			if (currentClip != null && currentClip.isRunning()) {
+				currentClip.stop();
+				currentClip.close();
+			}
+
+			File soundFile = new File("resources/SoundEffect/" + soundFileName);
+			if (!soundFile.exists()) {
+				System.err.println("Không tìm thấy file: " + soundFile.getAbsolutePath());
+				return;
+			}
+
+			AudioInputStream audioStream = AudioSystem.getAudioInputStream(soundFile);
+			currentClip = AudioSystem.getClip();
+			currentClip.open(audioStream);
+			currentClip.start();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	/** Adds labels to the form. */
@@ -406,6 +415,14 @@ public class SlotMachineGUI {
 			if (funds < creditBuyout && credits < bet) {
 				lblStatus.setText("Hết credits!");
 			} else if ((credits - bet) >= 0) {
+				playSound("slot_in.wav");
+				//sleep 2k ms
+				try {
+					Thread.sleep(500);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+				playSound("background.wav");
 				pnlReel1.setBackground(new java.awt.Color(255, 215, 0));
 				pnlReel2.setBackground(new java.awt.Color(255, 215, 0));
 				pnlReel3.setBackground(new java.awt.Color(255, 215, 0));
@@ -474,6 +491,7 @@ public class SlotMachineGUI {
 				pnlReel3.setBackground(new java.awt.Color(255, 0, 0));
 			}
 		} else if (reel2 == reel3) {
+			playSound("coin_drop2.wav");
 			lblStatus.setText("matched 2 symbols ("+images.get(reel2).getDescription()+")! +"+df.format(getPrize(payout))+" money!");
 			lblMatchTwo.setText("Matched 2: "+matchTwo());
 			pnlReel2.setBackground(new java.awt.Color(255, 0, 0)); // Highlights matched icons.

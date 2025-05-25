@@ -4,9 +4,87 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.util.Date;
+import java.util.*;
+import java.util.List;
+import java.util.ArrayList;
 
+class ATMStorage {
+    private static final Map<Integer, Integer> denominations = new HashMap<>();
+
+    public static Map<Integer, Integer> getDenominations() {
+        return denominations;
+    }
+
+    public static void loadFromDatabase() {
+        denominations.clear();
+        try {
+            Connn conn = new Connn();
+            String q = "select * from ATM_MenhGia";
+            ResultSet rs= conn.statement.executeQuery(q);
+            while (rs.next()) {
+                int denomination = rs.getInt("MenhGia");
+                int quantity = rs.getInt("SoLuong");
+                denominations.put(denomination, quantity);
+            }
+            rs.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static Map<Integer, Integer> withdraw(int withdrawAmount) {
+        List<Integer> sortedDenominations = new ArrayList<>(denominations.keySet());
+        sortedDenominations.sort(Collections.reverseOrder());
+
+        Map<Integer, Integer> result = new LinkedHashMap<>();
+        int remainingAmount = withdrawAmount;
+
+        for (int denomination : sortedDenominations) {
+            int availableQuantity = denominations.get(denomination);
+            int requiredNotes = remainingAmount / denomination;
+            int notesToDispense = Math.min(availableQuantity, requiredNotes);
+
+            if (notesToDispense > 0) {
+                result.put(denomination, notesToDispense);
+                remainingAmount -= notesToDispense * denomination;
+            }
+        }
+
+        if (remainingAmount == 0) {
+            // Update in-memory denomination count
+            for (Map.Entry<Integer, Integer> entry : result.entrySet()) {
+                int denomination = entry.getKey();
+                int dispensedNotes = entry.getValue();
+                denominations.put(denomination, denominations.get(denomination) - dispensedNotes);
+            }
+            return result;
+        }
+
+        return null;
+    }
+    public static void UpdateDB(Map<Integer, Integer> dispensed){
+        Connn conn = new Connn();
+        System.out.println("TEST \n");
+        for (Map.Entry<Integer, Integer> entry : dispensed.entrySet()) {
+            int denomination = entry.getKey();
+//            int quantityUsed = entry.getValue();
+
+            int currentQuantity = denominations.getOrDefault(denomination, 0);
+            System.out.println("currentQuantity: " + currentQuantity + "\n");
+//            System.out.println("newQuantity: " + newQuantity + "\n");
+//            System.out.println("quantityUsed: " + quantityUsed + "\n");
+            try {
+                conn.statement.executeUpdate("UPDATE ATM_MenhGia SET SoLuong = "+  currentQuantity +" WHERE MenhGia = " + denomination);
+            }
+            catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
 public class Withdrawl extends JFrame implements ActionListener {
 
     String card_number;
@@ -72,7 +150,6 @@ public class Withdrawl extends JFrame implements ActionListener {
                     JOptionPane.showMessageDialog(null, "Hãy nhập số tiền muốn rút");
                 } else {
 
-
                     int balance = BalanceEnquriy.get_balance(card_number);
                     if (balance < amount) {
                         JOptionPane.showMessageDialog(null, "Rút tiền thất bại! Số dư không đủ");
@@ -82,11 +159,32 @@ public class Withdrawl extends JFrame implements ActionListener {
                         JOptionPane.showMessageDialog(null, "Vui lòng nhập số tiền là bội của 50000");
                         return;
                     }
+                    ATMStorage.loadFromDatabase();
+                    // Thử rút tiền theo mệnh giá
+                    Map<Integer, Integer> dispensed = ATMStorage.withdraw(amount);
+                    if (dispensed == null) {
+                        JOptionPane.showMessageDialog(null, "Máy không còn đủ tiền");
+                        new main_Class(card_number);
+                        return;
+                    }
+                    ATMStorage.UpdateDB(dispensed);
                     Connn c = new Connn();
                     c.statement.executeUpdate("insert into ATM_transaction values('"+card_number+"', '"+date+"','Withdraw', "+amount+")");
                     balance = balance - amount;
                     c.statement.executeUpdate("update ATM_account set balance ="+ balance +" where card_number = '"+ card_number +"'");
-                    JOptionPane.showMessageDialog(null,  amount + "VND. " +  "Rút tiên thành công");
+
+                    StringBuilder sb = new StringBuilder();
+                    sb.append(amount + "VND. " +  "Rút tiên thành công \n");
+                    sb.append("Chi tiết mệnh giá:\n");
+                    for (Map.Entry<Integer, Integer> entry : dispensed.entrySet()) {
+                        sb.append(entry.getValue())
+                                .append(" tờ ")
+                                .append(entry.getKey())
+                                .append(" VND\n");
+                    }
+
+                    JOptionPane.showMessageDialog(null, sb.toString());
+
                     setVisible(false);
                     new main_Class(card_number);
 

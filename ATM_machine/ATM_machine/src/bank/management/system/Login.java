@@ -99,9 +99,10 @@ public class Login extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         try{
             if (e.getSource()==button1){
-                Connn c = new Connn();
+
                 String cardno = textField2.getText();
                 String pin = passwordField3.getText();
+                Connn c = new Connn();
                 String q = "select * from ATM_account where card_number = '"+cardno+"' and  pin = '"+pin+"'";
                 ResultSet resultSet = c.statement.executeQuery(q);
                 if (resultSet.next()){

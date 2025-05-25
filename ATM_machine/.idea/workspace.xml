@@ -5,7 +5,55 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c399ce3c-1cc8-4e18-abff-382c379cb6b5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Slot_machine/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Slot_machine/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Slot_machine/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Slot_machine/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Slot_machine/Slot_machine.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Slot_machine/out/production/Slot_machine/slotMachineGUI/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Slot_machine/out/production/Slot_machine/slotMachineGUI/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Slot_machine/out/production/Slot_machine/slotMachineGUI/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Slot_machine/out/production/Slot_machine/slotMachineGUI/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Slot_machine/out/production/Slot_machine/slotMachineGUI/SlotMachineGUI$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Slot_machine/out/production/Slot_machine/slotMachineGUI/SlotMachineGUI$AlwaysWinHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Slot_machine/out/production/Slot_machine/slotMachineGUI/SlotMachineGUI$BuyCreditsHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Slot_machine/out/production/Slot_machine/slotMachineGUI/SlotMachineGUI$SoundHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Slot_machine/out/production/Slot_machine/slotMachineGUI/SlotMachineGUI$SpinHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Slot_machine/out/production/Slot_machine/slotMachineGUI/SlotMachineGUI$SuperPrizeHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Slot_machine/out/production/Slot_machine/slotMachineGUI/SlotMachineGUI$TrollfaceHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Slot_machine/out/production/Slot_machine/slotMachineGUI/SlotMachineGUI.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Slot_machine/out/production/Slot_machine/slotMachineGUI/Slot_machine.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Slot_machine/out/production/Slot_machine/slotMachineGUI/Slot_machine.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Slot_machine/out/production/Slot_machine/slotMachineGUI/images/Banana.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Slot_machine/out/production/Slot_machine/slotMachineGUI/images/Bar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Slot_machine/out/production/Slot_machine/slotMachineGUI/images/Bell.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Slot_machine/out/production/Slot_machine/slotMachineGUI/images/Cherry.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Slot_machine/out/production/Slot_machine/slotMachineGUI/images/Chip-100.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Slot_machine/out/production/Slot_machine/slotMachineGUI/images/Chip-25.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Slot_machine/out/production/Slot_machine/slotMachineGUI/images/Chip-5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Slot_machine/out/production/Slot_machine/slotMachineGUI/images/Chip-50.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Slot_machine/out/production/Slot_machine/slotMachineGUI/images/Clover.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Slot_machine/out/production/Slot_machine/slotMachineGUI/images/Coin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Slot_machine/out/production/Slot_machine/slotMachineGUI/images/Diamond.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Slot_machine/out/production/Slot_machine/slotMachineGUI/images/Gold.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Slot_machine/out/production/Slot_machine/slotMachineGUI/images/Money.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Slot_machine/out/production/Slot_machine/slotMachineGUI/images/Plum.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Slot_machine/out/production/Slot_machine/slotMachineGUI/images/Seven.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Slot_machine/out/production/Slot_machine/slotMachineGUI/images/Trollface.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Slot_machine/out/production/Slot_machine/slotMachineGUI/images/Watermelon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Slot_machine/out/production/Slot_machine/slotMachineGUI/resources/SoundEffect/background.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Slot_machine/out/production/Slot_machine/slotMachineGUI/resources/SoundEffect/coin-drop-in-slot-2-sfx-330553.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Slot_machine/out/production/Slot_machine/slotMachineGUI/resources/SoundEffect/coin_drop2.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Slot_machine/out/production/Slot_machine/slotMachineGUI/resources/SoundEffect/slot_in.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Slot_machine/out/production/Slot_machine/slotMachineGUI/resources/SoundEffect/slot_in.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Slot_machine/resources/SoundEffect/background.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Slot_machine/resources/SoundEffect/coin_drop2.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Slot_machine/resources/SoundEffect/slot_in.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ATM_machine.rar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATM_machine/src/bank/management/system/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/ATM_machine/src/bank/management/system/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ATM_machine/src/bank/management/system/Withdrawl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ATM_machine/src/bank/management/system/Withdrawl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Slot_machine/SlotMachineGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Slot_machine/SlotMachineGUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,6 +137,11 @@
       <workItem from="1746867534574" duration="147000" />
       <workItem from="1747042660458" duration="25000" />
       <workItem from="1747042931505" duration="1189000" />
+      <workItem from="1748101887977" duration="733000" />
+      <workItem from="1748184660011" duration="619000" />
+      <workItem from="1748186006376" duration="149000" />
+      <workItem from="1748187319147" duration="2000" />
+      <workItem from="1748193301003" duration="4626000" />
     </task>
     <servers />
   </component>
