@@ -47,7 +47,7 @@ public class main_Class extends JFrame implements ActionListener {
         l3.add(b3);
 
         // mini statement
-        b4 = new JButton("");
+        b4 = new JButton("Thanh toán hóa đơn");
         b4.setForeground(Color.WHITE);
         b4.setBackground(new Color(65,125,128));
         b4.setBounds(700,318,150,35);
@@ -96,11 +96,13 @@ public class main_Class extends JFrame implements ActionListener {
             new BalanceEnquriy(card_number);
             setVisible(false);
         } else if (e.getSource()==b3) {
+            new TranferMoney(card_number);
             setVisible(false);
         } else if (e.getSource()==b5) {
             new Pin(card_number);
             setVisible(false);
         } else if (e.getSource()==b4) {
+            new PayBills(card_number);
             setVisible(false);
         }
     }
